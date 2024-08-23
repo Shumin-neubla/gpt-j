@@ -25,6 +25,7 @@ def capture_hook(module, input, output):
     input_data = [inp.cpu().numpy().tolist() for inp in input]
     output_data = output  # Handle other types of outputs if necessary
 
+    print(f"layer name is  {layer_name}")
     # Store the input and output
     layer_data[layer_name].append({
         "input": input_data,
